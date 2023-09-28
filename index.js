@@ -1,25 +1,23 @@
-const receivesAFunction = (callback) => {
-    
+function receivesAFunction(callback) {
     callback();
-  };
-
-const returnsANamedFunction = () => {
+}
+function callback() {
+    console.log("Anything");
+  }  
+  receivesAFunction();
+    
+  function returnsANamedFunction() {
+    
     function namedFunction() {
-        console.log("This is a named function.");
+      
     }
     return namedFunction;
-};
-
-const returnsAnAnonymousFunction = () => {
-    // Return an anonymous function
-    return () => {
-      console.log("This is an anonymous function.");
-    };
-};
-
-
-module.exports = {
-    receiveAFunction,
-    returnsANamedFunction,
-    returnAnAnonyomousFunction,
-};
+  }
+  
+function returnsAnAnonymousFunction(){
+    return function(){
+    }
+}
+    
+ 
+  
